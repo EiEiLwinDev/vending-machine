@@ -33,9 +33,9 @@ Supports web interface for admins and users, and a **RESTful API** with **JWT au
 
 ## Requirements
 
-- PHP >= 7.4
-- MySQL
-- Composer
+- PHP >= 8.2.27
+- MySQL >=9.2.0 for macos14.7
+- Composer >= 2.7.7
 - Web server (Apache/Nginx or built-in PHP server)
 
 ---
