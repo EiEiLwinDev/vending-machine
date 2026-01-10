@@ -16,8 +16,9 @@ class ProductsApiController
             exit;
         }
         $payload = JwtHelper::verify($token);
+        
         if (!$payload || ($payload['role'] ?? '') !== 'admin') {
-            Response::error("Unauthorized", 401);
+            Response::error("Forbidden!You do not have permission to access this resource.", 403);
             exit;
         }
         return $payload;
