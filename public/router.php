@@ -20,7 +20,7 @@
   require __DIR__ . '/../core/Response.php';
   
   //middleware
-  require __DIR__ . '/../app/middleware/auth.php';
+  require __DIR__ . '/../app/Middleware/Auth.php';
     
   // Controllers
   require __DIR__ . '/../app/Controllers/ProductsController.php';
