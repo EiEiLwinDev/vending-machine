@@ -6,8 +6,8 @@
   require __DIR__ . '/../vendor/autoload.php';
 
   // Load env FIRST
-  require __DIR__ . '/../core/Env.php';
-  Env::load(__DIR__ . '/../.env');
+//   require __DIR__ . '/../core/Env.php';
+//   Env::load(__DIR__ . '/../.env');
 
   // Core
   require __DIR__ . '/../core/Database.php';
