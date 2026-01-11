@@ -6,8 +6,8 @@
   require __DIR__ . '/../vendor/autoload.php';
 
   // Load env FIRST
-  require __DIR__ . '/../core/Env.php';
-  Env::load(__DIR__ . '/../.env');
+//   require __DIR__ . '/../core/Env.php';
+//   Env::load(__DIR__ . '/../.env');
 
   // Core
   require __DIR__ . '/../core/Database.php';
@@ -20,7 +20,7 @@
   require __DIR__ . '/../core/Response.php';
   
   //middleware
-  require __DIR__ . '/../app/middleware/auth.php';
+  require __DIR__ . '/../app/Middleware/Auth.php';
     
   // Controllers
   require __DIR__ . '/../app/Controllers/ProductsController.php';

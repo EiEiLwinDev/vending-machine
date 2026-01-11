@@ -5,16 +5,16 @@ class JwtHelper
 {
     public static function generate($payload)
     {
-        $key = Env::get('JWT_SECRET');
+        $key = getenv('JWT_SECRET');
         $payload['iat'] = time();
-        $payload['exp'] = time() + (Env::get('JWT_EXPIRY') ?? 3600);
+        $payload['exp'] = time() + (getenv('JWT_EXPIRY') ?? 3600);
         return JWT::encode($payload, $key, 'HS256');
     }
 
     public static function verify($token)
     {
         try {
-            $key = Env::get('JWT_SECRET');
+            $key = getenv('JWT_SECRET');
             return (array) JWT::decode($token, new Key($key, 'HS256'));
         } catch (\Exception $e) {
             return null;
